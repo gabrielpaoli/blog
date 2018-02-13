@@ -86,12 +86,6 @@ class ArticleController extends Controller
      */
     public function allArticles()
     {
-
-        $platform = 'la1';
-        $instance = new riotapi($platform);
-        var_dump($instance->getChampion());
-
-
         $articles = Article::where('public', '=', 0)->latest()->paginate(10);
         $this->parseArticle($articles);
         return view('articles.index',compact('articles'))

@@ -25,3 +25,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth']], function () {
     //Route::resource('photo', 'PhotoController');
 });
+
+Route::get('/champions', 'LolController@champions')->middleware('auth');

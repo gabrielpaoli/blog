@@ -41,6 +41,7 @@
                         @if (Route::has('login'))
                             @auth
                                 <li><a href="{{ url('/allArticles') }}">Articles</a></li>                                
+                                <li><a href="{{ url('/champions') }}">Champions</a></li>                                
                             @endauth
                         @endif
 
